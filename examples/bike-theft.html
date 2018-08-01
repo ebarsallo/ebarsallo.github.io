@@ -49,7 +49,7 @@
 
 		var geoJsonLayer = L.geoJson(geoJsonData, {
 			onEachFeature: function (feature, layer) {
-				layer.bindPopup("Stolen bikes: " + feature.properties.STOLEN_VAL);
+				layer.bindPopup("Theft value: " + feature.properties.STOLEN_VAL);
 			}
 		});
 		markers.addLayer(geoJsonLayer);
