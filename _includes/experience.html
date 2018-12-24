@@ -1,0 +1,27 @@
+<!-- Experience Section -->
+    <section class="sucess" id="experience" >
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-12 text-center">
+                  <h2>Experience</h2>
+                  <hr class="star-light">
+              </div>
+          </div>
+
+        <div id="timeline">
+          {% for exp in site.experience %}
+          {% capture clazz %} {% cycle 'timeline-content', 'timeline-content rigth' %} {% endcapture  %}
+          <div class="timeline-item clearfix">
+            <div class="timeline-icon"></div>
+            
+            <div class="{% cycle 'timeline-content right', 'timeline-content' %}">
+              <span class="date">{{ exp.timeperiod }}</span>
+              <h6 class="h3 my-2">{{ exp.company }}</h6>
+              <p class="">{{ exp.description }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div> 
+</section>
